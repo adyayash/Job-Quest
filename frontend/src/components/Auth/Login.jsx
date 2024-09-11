@@ -6,6 +6,7 @@ import { FaRegUser } from "react-icons/fa";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Context } from "../../main";
+import "../../App.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -46,7 +47,8 @@ const Login = () => {
       <section className="authPage">
         <div className="container">
           <div className="header">
-            <img src="/JobZeelogo.png" alt="logo" />
+            <img src="/jobquest.png" alt="logo" class = "mainlogo" />
+            <h6>Job-Quest</h6>
             <h3>Login to your account</h3>
           </div>
           <form>
