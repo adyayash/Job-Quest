@@ -95,6 +95,13 @@ const MyJobs = () => {
                   <div className="card" key={element._id}>
                     <div className="content">
                       <div className="short_fields">
+                      <div>
+                          <span>Company:</span>
+                          <input
+                            type="text"                          
+                            value={element.company}
+                          />
+                        </div>
                         <div>
                           <span>Title:</span>
                           <input

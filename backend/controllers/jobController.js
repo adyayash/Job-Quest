@@ -28,9 +28,10 @@ export const getAllJobs = catchAsyncErrors(async (req, res, next) => {
       fixedSalary,
       salaryFrom,
       salaryTo,
+      company,
     } = req.body;
   
-    if (!title || !description || !category || !country || !city || !location) {
+    if (!title || !description || !category || !country || !city || !location || !company) {
       return next(new ErrorHandler("Please provide full job details.", 400));
     }
   
@@ -60,6 +61,7 @@ export const getAllJobs = catchAsyncErrors(async (req, res, next) => {
       salaryFrom,
       salaryTo,
       postedBy,
+      company,
     });
     res.status(200).json({
       success: true,

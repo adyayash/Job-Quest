@@ -58,6 +58,11 @@ const jobSchema = new mongoose.Schema({
     ref: "User",
     required: true,
   },
+  company: {
+    type: String,
+    required: [true, "Please provide the company name."],
+    maxLength: [100, "Company name cannot exceed 100 Characters!"],
+  },
 });
 
 export const Job = mongoose.model("Job", jobSchema);

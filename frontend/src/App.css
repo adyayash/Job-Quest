@@ -1359,3 +1359,95 @@ nav .hamburger {
   padding-top: 10px;
   padding-left: 10px;
 }
+
+/* Container for job cards */
+.job_cards_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Styling for individual job cards */
+.job_card {
+  background: linear-gradient(145deg, #f0f0f0, #ffffff);
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  flex: 1 1 calc(33.333% - 1rem); /* Responsive layout */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect */
+.job_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(145deg, #ffffff, #f9f9f9);
+}
+
+/* Job title styling */
+.job_card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+/* Job description styling */
+.job_description {
+  color: #7f8c8d;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Add a decorative element */
+.job_card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #3498db, #9b59b6);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .job_card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .job_card {
+    flex: 1 1 100%;
+  }
+}
+
+.howitworks .card {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.howitworks .card:hover {
+  transform: scale(1.05); /* Slightly increases the size */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+  cursor: pointer; /* Shows a pointer cursor on hover */
+}
+
+.howitworks .card p {
+  margin: 10px 0;
+}
+
+.howitworks .banner {
+  display: flex;
+  gap: 20px;
+}
